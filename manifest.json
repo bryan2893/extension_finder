@@ -1,29 +1,16 @@
 {
+  "name": "Port finder",
   "manifest_version": 2,
-
-  "name": "Subneting resolver",
-  "description": "Crhome extension to resolve subneting given certain parameters",
-  "version": "1.0.3",
-
-  "browser_action": {
-    "default_popup": "index.html",
-    "default_title": "Subneting resolver"
-  },
-  "background": {
-    "scripts": ["background.js"]
-  },
-  "icons": {
-    "16": "./images/oyo-logo.png",
-    "48": "./images/oyo-logo.png",
-    "128": "./images/oyo-logo.png"
-  },
-  "permissions": [
-    "tabs"
-  ],
+  "description": "Chrome extension to resolve subneting given certain parameters",
+  "version": "1.0",
   "content_scripts": [
     {
-      "matches": ["http://*/*", "https://*/*"],
-      "js": ["contentScript.js"]
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
     }
-  ]
+  ],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_title": "Port Finder"
+  }
 }
