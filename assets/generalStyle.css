@@ -15,7 +15,7 @@ body{
     align-items: center;
 }
 
-input[type="text"] {
+input[type="number"] {
     border-radius: 5px;
     width: 80%;
     height: 30px;
@@ -55,4 +55,13 @@ button:hover{
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+}
+
+p{
+    content: "";
+    color: red;
+}
+
+textarea{
+    text-align: left;
 }
