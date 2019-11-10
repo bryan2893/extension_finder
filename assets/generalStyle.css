@@ -63,5 +63,6 @@ p{
 }
 
 textarea{
+    height: 70px;
     text-align: left;
 }

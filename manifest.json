@@ -1,5 +1,5 @@
 {
-  "name": "Subneting resolver",
+  "name": "Port finder",
   "manifest_version": 2,
   "description": "Chrome extension to resolve subneting given certain parameters",
   "version": "1.0",
@@ -11,6 +11,6 @@
   ],
   "browser_action": {
     "default_popup": "popup.html",
-    "default_title": "Extension Finder"
+    "default_title": "Port Finder"
   }
 }
