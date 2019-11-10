@@ -7,6 +7,10 @@ document.addEventListener('DOMContentLoaded', function(){
         textArea.value = content;
     }
 
+    function cleanTextArea(){
+        textArea.value = "";
+    }
+
     function showError(errorMessage){
         pTagError.textContent = errorMessage;
     }
@@ -68,6 +72,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
     function whenInputisFocused(){
         cleanErrorMessage();
+        cleanTextArea();
     }
 
     document.querySelector('input').addEventListener('focus',whenInputisFocused,false)
