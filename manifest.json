@@ -1,27 +1,16 @@
 {
-  "manifest_version": 2,
-
   "name": "Subneting resolver",
+  "manifest_version": 2,
   "description": "Chrome extension to resolve subneting given certain parameters",
-  "version": "1.0.3",
+  "version": "1.0",
   "content_scripts": [
     {
-      "matches": ["http://*/*", "https://*/*"],
-      "js": ["contentScript.js"]
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
     }
   ],
-  "background": {
-    "scripts": ["background.js"]
-  },
   "browser_action": {
-    "default_popup": "index.html",
-    "default_title": "Subneting resolver",
-    "default_icon": "./images/ip_icon.ico"
-  },
-  "icons": {
-    "256": "./images/ip_icon.ico"
-  },
-  "permissions": [
-    "tabs"
-  ]
+    "default_popup": "popup.html",
+    "default_title": "Extension Finder"
+  }
 }
