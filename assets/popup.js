@@ -28,10 +28,6 @@ document.addEventListener('DOMContentLoaded', function(){
             let portNumber = numberInput.value;
             fetch(urlToWellKnownPortsPage)
                 .then((result) => result.text()).then(function(text){
-                    //transform text to DOMnodes...
-                    //let tree = new document.createRange().createContextualFragment(String(text));
-
-                    //let tables = tree.getElementsByTagName("table");
 
                     let parser = new DOMParser();
                     let doc = parser.parseFromString(text, "text/html");
@@ -54,13 +50,7 @@ document.addEventListener('DOMContentLoaded', function(){
                     }else{
                         fillTextArea("No encontrado");
                     }
-
-                    /*
-                    chrome.tabs.query({currentWindow:true,active:true}, function(tabs){
-                        chrome.tabs.sendMessage(tabs[0].id,{type:"imprimir",payload:founded});
-                    });
-                    */
-
+                   
                 })
                 .catch(function() {
                     // This is where you run code if the server returns any errors
@@ -76,6 +66,5 @@ document.addEventListener('DOMContentLoaded', function(){
     }
 
     document.querySelector('input').addEventListener('focus',whenInputisFocused,false)
-
 
 },false);
